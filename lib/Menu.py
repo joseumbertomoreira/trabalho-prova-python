@@ -1,6 +1,9 @@
+from lib.Crud import Crud
+
 class Menu:
   
-  Tarefas = []
+  listaTarefas = []
+  crud = Crud()
 
   def init(self):
     
@@ -16,7 +19,9 @@ class Menu:
       opcoes = int(input())
 
       if opcoes == 1:
-        print("Adiciona tarefas")
+
+        self.crud.adicionarTarefa(self.listaTarefas)
+        
         print("\n")
       
       elif opcoes == 2:
